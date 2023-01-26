@@ -1,7 +1,7 @@
 import { getProductsById } from "@/services/getProductById"
 import { getProductsByName } from "@/services/getProductByName"
 import { Products } from "@/types/product"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 
 export interface StateUseProducts {
     loading: boolean
@@ -9,19 +9,8 @@ export interface StateUseProducts {
     pokemon: Products
 }
 
-interface PropsUseProducts {
-    id?:number
-    name?:string
-}
-// const VALUES_DEFAULT : Products = {
-// 	name: "",
-// 	id: 0,
-// 	height: 0,
-// 	image: "",
-// 	stats: [],
-// 	types: [],
-// 	weight: 0
-// }
+
+
 export const useProducts = () => {
 	const[loading,setLoading] = useState<StateUseProducts["loading"]>(false)
 	const[message,setMessage] = useState<StateUseProducts["message"]>("")
