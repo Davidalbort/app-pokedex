@@ -1,0 +1,9 @@
+@use "../abstracts/colors";
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    max-height: 50rem;
+    height: 100%;
+    background-color: colors.$color-background-color;
+}
