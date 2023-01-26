@@ -1,10 +1,12 @@
+@use "../abstracts/colors";
+
 body {
     height: 100%;
     font-family: 'Poppins', sans-serif;
-    letter-spacing: 3px;
-    // color: colors.$primary-white;
-    // background-color: colors.$primary-black;
-    // margin: 0 auto;
+    letter-spacing: 1px;
+    color: colors.$primary-white;
+    font-weight: 400;
+    background-color: colors.$color-background-color
 }
 
 h2 {

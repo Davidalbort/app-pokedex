@@ -1,0 +1,32 @@
+@use "./colors";
+
+@mixin label-hover {
+    background-color: colors.$primary-blue;
+    border-color: colors.$primary-blue;
+    cursor: pointer;
+}
+
+@mixin input-focus {
+    border: 2px solid colors.$primary-blue;
+}
+
+@mixin input-checked {
+    background-color: colors.$primary-blue;
+    border-color: colors.$primary-blue;
+}
+
+@mixin button-hover {
+    background-color: colors.$primary-blue;
+    border-color: colors.$primary-blue;
+    transform: translateY(-7px);
+    cursor: pointer;
+}
+
+@mixin button-active {
+    transform: translateY(-1px);
+}
+
+@mixin error-hover {
+    color: red;
+    cursor: pointer;
+}
