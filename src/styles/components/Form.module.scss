@@ -1,0 +1,112 @@
+@use "../abstracts/mixin";
+@use "../abstracts/colors";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    row-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+
+    &>h1 {
+        font-size: 4rem;
+    }
+
+    &>fieldset {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1rem;
+        border: none;
+        font-size: 1.4rem;
+        font-weight: 500;
+
+        &>legend {
+            margin-bottom: 1rem;
+        }
+
+        &>input {
+            display: none;
+
+            &:checked+label {
+                @include mixin.input-checked
+            }
+        }
+
+        &>label {
+            min-width: 10rem;
+            width: 20rem;
+            border: 1px solid colors.$primary-white;
+            transition: all 0.3s ease 0.2s;
+            text-align: center;
+            height: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.4rem;
+            font-weight: 500;
+            padding: 1rem;
+            background-color: colors.$background-color-input;
+
+            &:hover {
+                @include mixin.label-hover;
+            }
+        }
+    }
+
+    &>input {
+        min-width: 10rem;
+        width: 25rem;
+        height: 2rem;
+        font-size: 1.4rem;
+        font-weight: 400;
+        padding: 1rem;
+        outline: none;
+
+        border: 2px solid colors.$primary-white;
+
+        &:focus {
+            @include mixin.input-focus;
+        }
+    }
+
+    &>button {
+        min-width: 10rem;
+        width: 20rem;
+        border: 1px solid colors.$primary-white;
+        background-color: inherit;
+        font-size: 1.4rem;
+        font-weight: 500;
+        padding: 0.5rem;
+        color: colors.$primary-white;
+        transition: all 0.4s ease 0s;
+
+        &:hover {
+            @include mixin.button-hover;
+        }
+
+        &:active {
+            @include mixin.button-active;
+        }
+    }
+}
+
+.error {
+    border: 2px solid colors.$primary-white;
+    padding: 1rem;
+
+    &>span {
+        font-size: 2rem;
+        transition: all 0.3s ease 0s;
+
+        &:hover {
+            @include mixin.error-hover;
+        }
+    }
+
+    &>p {
+        font-size: 1.4rem;
+
+    }
+}
