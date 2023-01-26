@@ -8,10 +8,19 @@ interface PropsTypes {
 export const Types = ({types,className}:PropsTypes) => {
 	return(
 		<ul className={className}>
-			<h4>Type</h4>
-			{
-				types.map(type => <li key={`${type.slot}${type.type.name}`}>{type.type.name}</li>)
-			}
+			<h3>Type:</h3>
+			<div>
+				{
+					types.map((type,index) => {
+						return(
+							index>0 ?
+								<li key={type.type.name}>{`/${type.type.name}`}</li>
+								:
+								<li key={type.type.name}>{type.type.name}</li>
+						)
+					})
+				}
+			</div>
 		</ul>
 	)
 }

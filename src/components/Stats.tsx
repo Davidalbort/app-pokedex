@@ -12,7 +12,7 @@ export const Stats = ({stats,className}:PropsStats) => {
 				stats.map(stat => (
 					<li key={stat.stat.name}>
 						<span>{stat.stat.name}</span>
-						<span>{stat.base_stat}</span>
+						<p>{stat.base_stat}</p>
 
 					</li>)
 				)
